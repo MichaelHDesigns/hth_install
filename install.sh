@@ -1,27 +1,3 @@
-sudo apt-get install -y -q \
-        build-essential \
-        curl \
-        git \
-        libzmq3-dev \
-        python2.7 \
-
-apt-get update \
-    && apt-get install -y -q software-properties-common \
-    && add-apt-repository ppa:bitcoin/bitcoin \
-    && apt-get update \
-    && apt-get install -y -q \
-        automake \
-        autotools-dev \
-        bsdmainutils \
-        build-essential \
-        libboost-all-dev \
-        libdb4.8-dev \
-        libdb4.8++-dev \
-        libevent-dev \
-        libssl-dev \
-        libtool \
-        pkg-config \
-
 # compile last helpthehomelessd
 cd /tmp \
     && git clone https://github.com/HTHcoin/helpthehomeless \
