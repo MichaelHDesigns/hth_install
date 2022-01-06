@@ -1,11 +1,7 @@
 # compile last helpthehomelessd
-cd /tmp && git clone https://github.com/HTHcoin/helpthehomeless && cd helpthehomeless && ./autogen.sh && ./configure && make
-
-cp /tmp/helpthehomeless/src/{helpthehomelessd,helpthehomeless-cli} /usr/bin && rm -rf /tmp/helpthehomeless
-
-# setup and switch to user bitcore
-/usr/sbin/useradd -s /bin/helpthehomeless -m -d /bitcore bitcore && chown bitcore:bitcore -R /bitcore
-
+cd /tmp && git clone https://github.com/HTHcoin/helpthehomeless && cd helpthehomeless && ./autogen.sh && ./configure && make && 
+cp /tmp/helpthehomeless/src/{helpthehomelessd,helpthehomeless-cli} /usr/bin && rm -rf /tmp/helpthehomeless && # setup and switch to user bitcore
+/usr/sbin/useradd -s /bin/helpthehomeless -m -d /bitcore bitcore && chown bitcore:bitcore -R /bitcore &&
 su bitcore
 HOME=/bitcore
 NODE_VERSION=4.0.0
